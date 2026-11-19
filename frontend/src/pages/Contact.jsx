@@ -2,8 +2,10 @@ import React from 'react'
 import Title from '../components/Title'
 import { assets } from '../assets/assets'
 import NewsLetterBox from '../components/NewsLetterBox'
+import { useNavigate } from 'react-router-dom'
 
 const Contact = () => {
+  const navigate = useNavigate()
   return (
     <div>
       <div className="text-center text-2xl pt-10 border-t">
@@ -18,8 +20,8 @@ const Contact = () => {
           <p className='text-gray-500'>Tel: +261 34 28 554 02 <br /> Email: razanatsoaaimefreddy@gmail.com</p>
           <p className='font-semibold text-xl text-gray-600'>Careers at Forever</p>
           <p className='text-gray-500'>Learn more about our teams and job openings.</p>
-          <button className='border border-black px-8 py-4 text-sm hover:bg-black hover:text-white transition-all duration-500'>Explore Jobs</button>
-        </div>      
+          <button onClick={() => navigate('/')} className='border border-black px-8 py-4 text-sm hover:bg-black hover:text-white transition-all duration-500'>Back to Home</button>
+        </div>
       </div>
 
       <NewsLetterBox />
